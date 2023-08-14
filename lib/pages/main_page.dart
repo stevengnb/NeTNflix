@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netnflix/cust_class.dart';
 import 'package:netnflix/pages/account_page.dart';
 import 'package:netnflix/pages/home_page.dart';
+import 'package:netnflix/pages/search_page.dart';
 import 'package:netnflix/pages/show_page.dart';
 import 'package:netnflix/theme/dark_theme.dart';
 import 'package:netnflix/theme/light_theme.dart';
@@ -50,8 +51,16 @@ class _MainPageState extends State<MainPage> {
               const SizedBox(
                 width: 20,
               ),
-              const Icon(
-                Icons.search,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SearchPage(username: widget.username)),
+                  );
+                },
+                child: const Icon(
+                  Icons.search,
+                ),
               ),
               const SizedBox(
                 width: 20,
