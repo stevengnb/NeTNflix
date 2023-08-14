@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netnflix/cust_class.dart';
 import 'package:netnflix/pages/login_page.dart';
 
+
 void main(List<String> args) {
   runApp(const NeTNflix());
 }
