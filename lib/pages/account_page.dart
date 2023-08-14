@@ -121,47 +121,6 @@ class _AccountPageState extends State<AccountPage> {
                   },
                 ),
                 TextButton(
-                  onPressed: () {
-                    showDialog(
-                      context: context, 
-                      builder: (BuildContext context) {
-                        return StatefulBuilder(
-                          builder: (BuildContext context, StateSetter setState) {
-                            return AlertDialog( 
-                              backgroundColor: Colors.grey,
-                              title: const Text("Theme"),
-                              actions: [
-                                SwitchListTile(
-                                  controlAffinity: ListTileControlAffinity.leading,
-                                  contentPadding: EdgeInsets.zero,
-                                  title: const Text("Light Theme"),
-                                  value: CustClass.isLight, 
-                                  onChanged: (value) {
-                                    setState(() {
-                                      CustClass.isLight = value;
-                                    });
-                                  },
-                                ),
-                              ],
-                            );
-                          }
-                      );
-                    });
-                  },  
-                  style: TextButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 68, 66, 66),
-                    minimumSize: const Size(335, 50),
-                  ),
-                  child: const Text(
-                    "Light Theme",
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ), 
-                ),
-                TextButton(
                     onPressed: handleLogOut,
                     style: TextButton.styleFrom(
                       minimumSize: const Size(335, 50),
